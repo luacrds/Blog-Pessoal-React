@@ -16,6 +16,7 @@ function ListaPostagens() {
     const token = usuario.token;
 
     async function buscarPostagens() {
+        
         try {
             await buscar('/postagens', setPostagens, {
                 headers: {
@@ -27,6 +28,8 @@ function ListaPostagens() {
             if (error.toString().includes('403')) {
                 handleLogout()
             }
+            console.log(error);
+            
         }
     }
 

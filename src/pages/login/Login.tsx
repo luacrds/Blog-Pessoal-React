@@ -17,6 +17,7 @@ function Login() {
         {} as UsuarioLogin
     )
 
+
     useEffect(() => {
         if (usuario.token !== "") {
             navigate('/home')
